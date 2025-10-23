@@ -28,56 +28,82 @@
 
 // ===================== Planet Weight Calculator ================ //
 
-const output = document.getElementById("output");
+// const output = document.getElementById("output");
 
-let planet = window
-  .prompt(
-    "Enter a planet name (Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune):"
-  )
-  .toLocaleLowerCase();
-let weight = Number(window.prompt("Enter your weight :"));
+// let planet = window
+//   .prompt(
+//     "Enter a planet name (Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune):"
+//   )
+//   .toLocaleLowerCase();
+// let weight = Number(window.prompt("Enter your weight :"));
 
-let gravity = 0;
-let planetName = "";
-let found = true;
+// let gravity = 0;
+// let planetName = "";
+// let found = true;
 
-if (planet === "mercury") {
-  planetName = "Mercury";
-  gravity = 3.7;
-} else if (planet === "venus") {
-  planetName = "Venus";
-  gravity = 8.87;
-} else if (planet === "earth") {
-  planetName = "Earth";
-  gravity = 9.8;
-} else if (planet === "mars") {
-  planetName = "Mars";
-  gravity = 3.71;
-} else if (planet === "jupiter") {
-  planetName = "Jupiter";
-  gravity = 24.79;
-} else if (planet === "saturn") {
-  planetName = "Saturn";
-  gravity = 10.44;
-} else if (planet === "uranus") {
-  planetName = "Uranus";
-  gravity = 8.69;
-} else if (planet === "neptune") {
-  planetName = "Neptune";
-  gravity = 11.15;
-} else {
-  found = false;
-}
+// if (planet === "mercury") {
+//   planetName = "Mercury";
+//   gravity = 3.7;
+// } else if (planet === "venus") {
+//   planetName = "Venus";
+//   gravity = 8.87;
+// } else if (planet === "earth") {
+//   planetName = "Earth";
+//   gravity = 9.8;
+// } else if (planet === "mars") {
+//   planetName = "Mars";
+//   gravity = 3.71;
+// } else if (planet === "jupiter") {
+//   planetName = "Jupiter";
+//   gravity = 24.79;
+// } else if (planet === "saturn") {
+//   planetName = "Saturn";
+//   gravity = 10.44;
+// } else if (planet === "uranus") {
+//   planetName = "Uranus";
+//   gravity = 8.69;
+// } else if (planet === "neptune") {
+//   planetName = "Neptune";
+//   gravity = 11.15;
+// } else {
+//   found = false;
+// }
 
-if (found) {
-  let yourWeight = ((weight * gravity) / 9.8).toFixed(2);
+// if (found) {
+//   let yourWeight = ((weight * gravity) / 9.8).toFixed(2);
 
-  output.innerHTML = `<p><b>Planet :</b> ${planetName}</p>
-    <p><b>Gravity :</b> ${gravity} m/s²</p>
-    <p><b>Your weight on this planet :</b> ${yourWeight} kg</p>
-    `;
-} else {
-  output.textContent = "❌ Planet not found! Please try again.";
-}
+//   output.innerHTML = `<p><b>Planet :</b> ${planetName}</p>
+//     <p><b>Gravity :</b> ${gravity} m/s²</p>
+//     <p><b>Your weight on this planet :</b> ${yourWeight} kg</p>
+//     `;
+// } else {
+//   output.textContent = "❌ Planet not found! Please try again.";
+// }
 
 // ===================== Planet Weight Calculator ================ //
+
+// ===================== Multiplication Table ==================== //
+
+const container = document.getElementById("tableContainer");
+const number = window.prompt("Enter a number :");
+
+let table = document.createElement("table");
+
+let header = document.createElement("tr");
+header.innerHTML = `<th>Multiplicand</th><th>Multiplier</th><th>Result</th>`;
+
+table.appendChild(header);
+
+for (let i = 1; i <= 10; i++) {
+    
+  let row = document.createElement("tr");
+
+  let result = number * i;
+
+  row.innerHTML = `<td>${number}</td><td>${i}</td><td>${result}</td>`;
+
+  table.appendChild(row);
+  container.appendChild(table);
+}
+
+// ===================== Multiplication Table ==================== //
