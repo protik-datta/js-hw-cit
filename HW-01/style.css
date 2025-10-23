@@ -80,3 +80,36 @@ tr:hover {
 }
 
 /* ==================== Multiplication Table ============= */
+
+/* ==================== Alphabet Checker ================= */
+
+.letter {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.vowel {
+  background-color: #ffd966;
+  color: #d9534f;
+}
+
+.consonant {
+  background-color: #b0e0e6;
+  color: #0b3d91;           
+}
+
+.message {
+  color: #27b047bc; 
+}
+
+/* ==================== Alphabet Checker ================= */

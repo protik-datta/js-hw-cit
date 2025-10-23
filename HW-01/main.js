@@ -84,26 +84,51 @@
 
 // ===================== Multiplication Table ==================== //
 
-const container = document.getElementById("tableContainer");
-const number = window.prompt("Enter a number :");
+// const container = document.getElementById("tableContainer");
+// const number = window.prompt("Enter a number :");
 
-let table = document.createElement("table");
+// let table = document.createElement("table");
 
-let header = document.createElement("tr");
-header.innerHTML = `<th>Multiplicand</th><th>Multiplier</th><th>Result</th>`;
+// let header = document.createElement("tr");
+// header.innerHTML = `<th>Multiplicand</th><th>Multiplier</th><th>Result</th>`;
 
-table.appendChild(header);
+// table.appendChild(header);
 
-for (let i = 1; i <= 10; i++) {
-    
-  let row = document.createElement("tr");
+// for (let i = 1; i <= 10; i++) {
 
-  let result = number * i;
+//   let row = document.createElement("tr");
 
-  row.innerHTML = `<td>${number}</td><td>${i}</td><td>${result}</td>`;
+//   let result = number * i;
 
-  table.appendChild(row);
-  container.appendChild(table);
-}
+//   row.innerHTML = `<td>${number}</td><td>${i}</td><td>${result}</td>`;
+
+//   table.appendChild(row);
+//   container.appendChild(table);
+// }
 
 // ===================== Multiplication Table ==================== //
+
+// ======================= Alphabet Checker ====================== //
+
+const letter = document.getElementById("letter");
+const message = document.getElementById("message");
+
+const input = window.prompt(
+  "Enter a word to check if it is vowel or consonant :"
+);
+
+const vowels = ["A", "E", "I", "O", "U", "a", "e", "i", "o", "u"];
+
+if (!isNaN(input) || input.length > 1) {
+  alert("Do not enter any number ❌ and enter only one word ✅");
+} else if (vowels.includes(input)) {
+  letter.textContent = input;
+  letter.classList.add("vowel");
+  message.textContent = `${input} is a Vowel`;
+} else {
+  letter.textContent = input;
+  letter.classList.add("consonant");
+  message.textContent = `${input} is a Consonant`;
+}
+
+// ======================= Alphabet Checker ====================== //
