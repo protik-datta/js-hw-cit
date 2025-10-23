@@ -110,25 +110,78 @@
 
 // ======================= Alphabet Checker ====================== //
 
-const letter = document.getElementById("letter");
-const message = document.getElementById("message");
+// const letter = document.getElementById("letter");
+// const message = document.getElementById("message");
 
-const input = window.prompt(
-  "Enter a word to check if it is vowel or consonant :"
-);
+// const input = window.prompt(
+//   "Enter a word to check if it is vowel or consonant :"
+// );
 
-const vowels = ["A", "E", "I", "O", "U", "a", "e", "i", "o", "u"];
+// const vowels = ["A", "E", "I", "O", "U", "a", "e", "i", "o", "u"];
 
-if (!isNaN(input) || input.length > 1) {
-  alert("Do not enter any number ❌ and enter only one word ✅");
-} else if (vowels.includes(input)) {
-  letter.textContent = input;
-  letter.classList.add("vowel");
-  message.textContent = `${input} is a Vowel`;
-} else {
-  letter.textContent = input;
-  letter.classList.add("consonant");
-  message.textContent = `${input} is a Consonant`;
-}
+// if (!isNaN(input) || input.length > 1) {
+//   alert("Do not enter any number ❌ and enter only one word ✅");
+// } else if (vowels.includes(input)) {
+//   letter.textContent = input;
+//   letter.classList.add("vowel");
+//   message.textContent = `${input} is a Vowel`;
+// } else {
+//   letter.textContent = input;
+//   letter.classList.add("consonant");
+//   message.textContent = `${input} is a Consonant`;
+// }
 
 // ======================= Alphabet Checker ====================== //
+
+// ======================= Mini Weather Emoji ==================== //
+
+const output = document.getElementById("weatherOutput");
+const emojis = document.querySelector(".emoji");
+const messages = document.querySelector(".message");
+const temperature = document.querySelector(".temperature");
+
+let temp = Number(window.prompt("Enter current temperature (°C):"));
+
+let emoji = "";
+let message = "";
+
+switch (true) {
+  case temp > 60 || temp < -60 || isNaN(temp):
+    alert("Enter a real time temparature.Invalid Input ❌");
+
+  case temp >= 30:
+    emoji = "☀️";
+    message = "It's very hot! Stay hydrated and enjoy the sun ☀️";
+    break;
+
+  case temp >= 20 && temp < 30:
+    emoji = "⛅";
+    message = "Nice weather! Perfect day for outdoor activities 🌤️";
+    break;
+
+  case temp >= 10 && temp < 20:
+    emoji = "🌧️";
+    message = "Cool weather with some rain. Don't forget your umbrella 🌂";
+    break;
+
+  case temp >= 0 && temp < 10:
+    emoji = "❄️";
+    message = "Cold day! Wear warm clothes ❄️";
+    break;
+
+  default:
+    emoji = "🌨️";
+    message = "Freezing cold! Stay indoors and keep warm ☃️";
+    break;
+}
+
+emojis.textContent = emoji;
+emojis.classList.add("emoji");
+
+messages.textContent = message;
+messages.classList.add("message");
+
+output.appendChild(emojis);
+output.appendChild(messages);
+
+// ======================= Mini Weather Emoji ==================== //

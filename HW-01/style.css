@@ -105,11 +105,41 @@ tr:hover {
 
 .consonant {
   background-color: #b0e0e6;
-  color: #0b3d91;           
+  color: #0b3d91;
 }
 
 .message {
-  color: #27b047bc; 
+  color: #27b047bc;
 }
 
 /* ==================== Alphabet Checker ================= */
+
+/* ==================== Mini Weather Emoji ================= */
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #0277bd;
+}
+
+.weather-card {
+  background-color: #ffffff;
+  padding: 20px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 10px;
+  width: 300px;
+}
+
+.emoji {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.message {
+  font-size: 20px;
+  color: #555;
+}
+
+/* ==================== Mini Weather Emoji ================= */
