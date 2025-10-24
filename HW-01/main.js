@@ -188,52 +188,192 @@
 
 // ======================= Product Discount List ==================== //
 
-const products = [
-  { name: "Notebook (300 pages)", price: 150, discount: 5 },
-  { name: "Smartphone", price: 18500, discount: 10 },
-  { name: "Backpack", price: 1200, discount: 15 },
-  { name: "Running Shoes", price: 3500, discount: 20 },
-  { name: "Water Bottle (1L)", price: 350, discount: 8 },
-  { name: "Bluetooth Earbuds", price: 2200, discount: 12 },
-  { name: "Fiction Book - The Alchemist", price: 480, discount: 7 },
-  { name: "Desk Lamp", price: 950, discount: 10 },
-  { name: "T-Shirt (Cotton)", price: 600, discount: 5 },
-  { name: "Laptop", price: 58000, discount: 18 },
-];
+// const products = [
+//   { name: "Notebook (300 pages)", price: 150, discount: 5 },
+//   { name: "Smartphone", price: 18500, discount: 10 },
+//   { name: "Backpack", price: 1200, discount: 15 },
+//   { name: "Running Shoes", price: 3500, discount: 20 },
+//   { name: "Water Bottle (1L)", price: 350, discount: 8 },
+//   { name: "Bluetooth Earbuds", price: 2200, discount: 12 },
+//   { name: "Fiction Book - The Alchemist", price: 480, discount: 7 },
+//   { name: "Desk Lamp", price: 950, discount: 10 },
+//   { name: "T-Shirt (Cotton)", price: 600, discount: 5 },
+//   { name: "Laptop", price: 58000, discount: 18 },
+// ];
 
-const container = document.getElementById("product-container");
+// const container = document.getElementById("product-container");
 
-for (let i = 0; i < products.length; i++) {
-  let product = products[i];
-  let finalPrice = product.price - (product.price * product.discount) / 100;
-  let categoryClass = finalPrice > 1000 ? "premium" : "regular";
+// for (let i = 0; i < products.length; i++) {
+//   let product = products[i];
+//   let finalPrice = product.price - (product.price * product.discount) / 100;
+//   let categoryClass = finalPrice > 1000 ? "premium" : "regular";
 
-  const card = document.createElement("div");
-  card.classList.add("card");
+//   const card = document.createElement("div");
+//   card.classList.add("card");
 
-  const productName = document.createElement("div");
-  productName.classList.add("product-name");
-  productName.textContent = product.name;
+//   const productName = document.createElement("div");
+//   productName.classList.add("product-name");
+//   productName.textContent = product.name;
 
-  const price = document.createElement("div");
-  price.classList.add("price");
-  price.textContent = `Price: ৳${product.price}`;
+//   const price = document.createElement("div");
+//   price.classList.add("price");
+//   price.textContent = `Price: ৳${product.price}`;
 
-  const discount = document.createElement("div");
-  discount.classList.add("discount");
-  discount.textContent = `Discount: ${product.discount}%`;
+//   const discount = document.createElement("div");
+//   discount.classList.add("discount");
+//   discount.textContent = `Discount: ${product.discount}%`;
 
-  const final = document.createElement("div");
-  final.classList.add("final-price", categoryClass);
-  final.textContent = `Final: ৳${finalPrice.toFixed(2)}`;
+//   const final = document.createElement("div");
+//   final.classList.add("final-price", categoryClass);
+//   final.textContent = `Final: ৳${finalPrice.toFixed(2)}`;
 
-  card.appendChild(productName);
-  card.appendChild(price);
-  card.appendChild(discount);
-  card.appendChild(final);
+//   card.appendChild(productName);
+//   card.appendChild(price);
+//   card.appendChild(discount);
+//   card.appendChild(final);
 
-  container.appendChild(card);
-}
-
+//   container.appendChild(card);
+// }
 
 // ======================= Product Discount List ==================== //
+
+// ======================= Country Info Display ==================== //
+
+// const countries = [
+//   {
+//     name: "Bangladesh",
+//     capital: "Dhaka",
+//     population: 171000000,
+//     continent: "Asia",
+//   },
+//   {
+//     name: "India",
+//     capital: "New Delhi",
+//     population: 1440000000,
+//     continent: "Asia",
+//   },
+//   {
+//     name: "China",
+//     capital: "Beijing",
+//     population: 1412000000,
+//     continent: "Asia",
+//   },
+//   { name: "Japan", capital: "Tokyo", population: 125000000, continent: "Asia" },
+//   {
+//     name: "South Korea",
+//     capital: "Seoul",
+//     population: 51700000,
+//     continent: "Asia",
+//   },
+//   {
+//     name: "USA",
+//     capital: "Washington D.C.",
+//     population: 340000000,
+//     continent: "North America",
+//   },
+//   {
+//     name: "Canada",
+//     capital: "Ottawa",
+//     population: 39000000,
+//     continent: "North America",
+//   },
+//   {
+//     name: "Mexico",
+//     capital: "Mexico City",
+//     population: 130000000,
+//     continent: "North America",
+//   },
+//   {
+//     name: "Brazil",
+//     capital: "Brasilia",
+//     population: 220000000,
+//     continent: "South America",
+//   },
+//   {
+//     name: "Argentina",
+//     capital: "Buenos Aires",
+//     population: 45000000,
+//     continent: "South America",
+//   },
+//   {
+//     name: "Germany",
+//     capital: "Berlin",
+//     population: 84000000,
+//     continent: "Europe",
+//   },
+//   {
+//     name: "France",
+//     capital: "Paris",
+//     population: 67000000,
+//     continent: "Europe",
+//   },
+//   {
+//     name: "United Kingdom",
+//     capital: "London",
+//     population: 68000000,
+//     continent: "Europe",
+//   },
+//   { name: "Italy", capital: "Rome", population: 60000000, continent: "Europe" },
+//   {
+//     name: "Nigeria",
+//     capital: "Abuja",
+//     population: 223000000,
+//     continent: "Africa",
+//   },
+//   {
+//     name: "Egypt",
+//     capital: "Cairo",
+//     population: 111000000,
+//     continent: "Africa",
+//   },
+//   {
+//     name: "South Africa",
+//     capital: "Pretoria",
+//     population: 60000000,
+//     continent: "Africa",
+//   },
+//   {
+//     name: "Australia",
+//     capital: "Canberra",
+//     population: 26000000,
+//     continent: "Oceania",
+//   },
+//   {
+//     name: "New Zealand",
+//     capital: "Wellington",
+//     population: 5200000,
+//     continent: "Oceania",
+//   },
+//   {
+//     name: "Russia",
+//     capital: "Moscow",
+//     population: 146000000,
+//     continent: "Europe/Asia",
+//   },
+// ];
+
+// const container = document.getElementById("country-container");
+
+// for (let i = 0; i < countries.length; i++) {
+//   let country = countries[i];
+
+//   let statusClass = country.population > 500000000 ? "developed" : "developing";
+//   let statusText = country.population > 500000000 ? "Developed" : "Developing";
+
+//   let popM = (country.population / 1000000).toFixed(1) + " M";
+
+//   const card = document.createElement("div");
+//   card.classList.add("card");
+
+//   card.innerHTML = `
+//   <div class = "country-name">${country.name}</div>
+//   <div class = "capital">${country.capital}</div>
+//   <div class = "continent">${country.continent}</div>
+//   <div class = "population">${popM}</div>
+//   <div class = "status ${statusClass}">${statusText}</div>
+//   `;
+
+//   container.appendChild(card);
+// }
+
+// ======================= Country Info Display ==================== //
