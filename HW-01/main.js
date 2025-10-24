@@ -135,53 +135,105 @@
 
 // ======================= Mini Weather Emoji ==================== //
 
-const output = document.getElementById("weatherOutput");
-const emojis = document.querySelector(".emoji");
-const messages = document.querySelector(".message");
-const temperature = document.querySelector(".temperature");
+// const output = document.getElementById("weatherOutput");
+// const emojis = document.querySelector(".emoji");
+// const messages = document.querySelector(".message");
+// const temperature = document.querySelector(".temperature");
 
-let temp = Number(window.prompt("Enter current temperature (°C):"));
+// let temp = Number(window.prompt("Enter current temperature (°C):"));
 
-let emoji = "";
-let message = "";
+// let emoji = "";
+// let message = "";
 
-switch (true) {
-  case temp > 60 || temp < -60 || isNaN(temp):
-    alert("Enter a real time temparature.Invalid Input ❌");
+// switch (true) {
+//   case temp > 60 || temp < -60 || isNaN(temp):
+//     alert("Enter a real time temparature.Invalid Input ❌");
 
-  case temp >= 30:
-    emoji = "☀️";
-    message = "It's very hot! Stay hydrated and enjoy the sun ☀️";
-    break;
+//   case temp >= 30:
+//     emoji = "☀️";
+//     message = "It's very hot! Stay hydrated and enjoy the sun ☀️";
+//     break;
 
-  case temp >= 20 && temp < 30:
-    emoji = "⛅";
-    message = "Nice weather! Perfect day for outdoor activities 🌤️";
-    break;
+//   case temp >= 20 && temp < 30:
+//     emoji = "⛅";
+//     message = "Nice weather! Perfect day for outdoor activities 🌤️";
+//     break;
 
-  case temp >= 10 && temp < 20:
-    emoji = "🌧️";
-    message = "Cool weather with some rain. Don't forget your umbrella 🌂";
-    break;
+//   case temp >= 10 && temp < 20:
+//     emoji = "🌧️";
+//     message = "Cool weather with some rain. Don't forget your umbrella 🌂";
+//     break;
 
-  case temp >= 0 && temp < 10:
-    emoji = "❄️";
-    message = "Cold day! Wear warm clothes ❄️";
-    break;
+//   case temp >= 0 && temp < 10:
+//     emoji = "❄️";
+//     message = "Cold day! Wear warm clothes ❄️";
+//     break;
 
-  default:
-    emoji = "🌨️";
-    message = "Freezing cold! Stay indoors and keep warm ☃️";
-    break;
-}
+//   default:
+//     emoji = "🌨️";
+//     message = "Freezing cold! Stay indoors and keep warm ☃️";
+//     break;
+// }
 
-emojis.textContent = emoji;
-emojis.classList.add("emoji");
+// emojis.textContent = emoji;
+// emojis.classList.add("emoji");
 
-messages.textContent = message;
-messages.classList.add("message");
+// messages.textContent = message;
+// messages.classList.add("message");
 
-output.appendChild(emojis);
-output.appendChild(messages);
+// output.appendChild(emojis);
+// output.appendChild(messages);
 
 // ======================= Mini Weather Emoji ==================== //
+
+// ======================= Product Discount List ==================== //
+
+const products = [
+  { name: "Notebook (300 pages)", price: 150, discount: 5 },
+  { name: "Smartphone", price: 18500, discount: 10 },
+  { name: "Backpack", price: 1200, discount: 15 },
+  { name: "Running Shoes", price: 3500, discount: 20 },
+  { name: "Water Bottle (1L)", price: 350, discount: 8 },
+  { name: "Bluetooth Earbuds", price: 2200, discount: 12 },
+  { name: "Fiction Book - The Alchemist", price: 480, discount: 7 },
+  { name: "Desk Lamp", price: 950, discount: 10 },
+  { name: "T-Shirt (Cotton)", price: 600, discount: 5 },
+  { name: "Laptop", price: 58000, discount: 18 },
+];
+
+const container = document.getElementById("product-container");
+
+for (let i = 0; i < products.length; i++) {
+  let product = products[i];
+  let finalPrice = product.price - (product.price * product.discount) / 100;
+  let categoryClass = finalPrice > 1000 ? "premium" : "regular";
+
+  const card = document.createElement("div");
+  card.classList.add("card");
+
+  const productName = document.createElement("div");
+  productName.classList.add("product-name");
+  productName.textContent = product.name;
+
+  const price = document.createElement("div");
+  price.classList.add("price");
+  price.textContent = `Price: ৳${product.price}`;
+
+  const discount = document.createElement("div");
+  discount.classList.add("discount");
+  discount.textContent = `Discount: ${product.discount}%`;
+
+  const final = document.createElement("div");
+  final.classList.add("final-price", categoryClass);
+  final.textContent = `Final: ৳${finalPrice.toFixed(2)}`;
+
+  card.appendChild(productName);
+  card.appendChild(price);
+  card.appendChild(discount);
+  card.appendChild(final);
+
+  container.appendChild(card);
+}
+
+
+// ======================= Product Discount List ==================== //

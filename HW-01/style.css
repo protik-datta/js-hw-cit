@@ -1,18 +1,15 @@
 body {
-  background-color: #000;
-  color: #fff;
-  font-family: "Gilroy", sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f3f4f7, #ffffff);
+  color: #333;
+  text-align: center;
   margin: 0;
+  padding: 30px;
 }
 
 /* ===================== Age Group Analyzer ============== */
 
-.heading3 {
+/* .heading3 {
   text-align: center;
   font-size: 30px;
   letter-spacing: 1px;
@@ -23,13 +20,13 @@ body {
   font-size: 28px;
   letter-spacing: 1px;
   line-height: 1.3;
-}
+} */
 
 /* ===================== Age Group Analyzer ============== */
 
 /* ===================== Planet Weight Calculator ======== */
 
-h1 {
+/* h1 {
   font-size: 32px;
   letter-spacing: 1px;
   margin-bottom: 20px;
@@ -47,7 +44,7 @@ h1 {
 
 /* ==================== Multiplication Table ============= */
 
-h1 {
+/* h1 {
   text-align: center;
   font-size: 36px;
   margin-bottom: 20px;
@@ -77,13 +74,13 @@ th {
 
 tr:hover {
   background-color: rgba(255, 255, 255, 0.1);
-}
+} */
 
 /* ==================== Multiplication Table ============= */
 
 /* ==================== Alphabet Checker ================= */
 
-.letter {
+/* .letter {
   width: 50px;
   height: 50px;
   display: flex;
@@ -110,13 +107,13 @@ tr:hover {
 
 .message {
   color: #27b047bc;
-}
+} */
 
 /* ==================== Alphabet Checker ================= */
 
 /* ==================== Mini Weather Emoji ================= */
 
-h1 {
+/* h1 {
   font-size: 36px;
   margin-bottom: 20px;
   color: #0277bd;
@@ -140,6 +137,69 @@ h1 {
 .message {
   font-size: 20px;
   color: #555;
-}
+} */
 
 /* ==================== Mini Weather Emoji ================= */
+
+/* ==================== Product Discount List ================= */
+
+h1 {
+  color: #3a3a8f;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 3px #ccc;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 18px 20px;
+  width: 220px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.product-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #3a3a8f;
+  margin-bottom: 8px;
+}
+
+.price,
+.discount {
+  font-size: 0.95rem;
+  margin: 3px 0;
+  color: #555;
+}
+
+.final-price {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.premium {
+  color: #008b32;
+}
+
+.regular {
+  color: #d9534f;
+}
+
+/* ==================== Product Discount List ================= */
