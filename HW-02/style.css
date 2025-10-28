@@ -1,0 +1,17 @@
+body {
+  background: #000;
+  color: white;
+  font-family: 'Gilroy',sans-serif;
+}
+
+.invoice{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 40px;
+}
+
+hr{
+    width: 90%;
+}
