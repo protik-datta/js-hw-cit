@@ -377,3 +377,49 @@
 // }
 
 // ======================= Country Info Display ==================== //
+
+// ======================= Country Info Display ==================== //
+
+const redBtn = document.getElementById("redBtn");
+const yellowBtn = document.getElementById("yellowBtn");
+const greenBtn = document.getElementById("greenBtn");
+const autoBtn = document.getElementById("autoBtn");
+
+const red = document.querySelector(".red");
+const yellow = document.querySelector(".yellow");
+const green = document.querySelector(".green");
+
+redBtn.addEventListener("click", () => {
+  red.classList.toggle("active");
+  yellow.classList.remove("active");
+  green.classList.remove("active");
+});
+
+yellowBtn.addEventListener("click", () => {
+  yellow.classList.toggle("active");
+  green.classList.remove("active");
+  red.classList.remove("active");
+});
+
+greenBtn.addEventListener("click", () => {
+  green.classList.toggle("active");
+  yellow.classList.remove("active");
+  red.classList.remove("active");
+});
+
+const lights = [red, yellow, green];
+let i = 0;
+
+autoBtn.addEventListener("click", () => {
+  setInterval(() => {
+    lights.forEach((light) => {
+      light.classList.add("active");
+    });
+
+    lights[i].classList.remove("active");
+
+    i = (i+1) % lights.length;
+  }, 5000);
+});
+
+// ======================= Country Info Display ==================== //
