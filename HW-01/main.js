@@ -378,48 +378,73 @@
 
 // ======================= Country Info Display ==================== //
 
-// ======================= Country Info Display ==================== //
+// ======================= Traffic Signal Simulation ==================== //
 
-const redBtn = document.getElementById("redBtn");
-const yellowBtn = document.getElementById("yellowBtn");
-const greenBtn = document.getElementById("greenBtn");
-const autoBtn = document.getElementById("autoBtn");
+// const redBtn = document.getElementById("redBtn");
+// const yellowBtn = document.getElementById("yellowBtn");
+// const greenBtn = document.getElementById("greenBtn");
+// const autoBtn = document.getElementById("autoBtn");
 
-const red = document.querySelector(".red");
-const yellow = document.querySelector(".yellow");
-const green = document.querySelector(".green");
+// const red = document.querySelector(".red");
+// const yellow = document.querySelector(".yellow");
+// const green = document.querySelector(".green");
 
-redBtn.addEventListener("click", () => {
-  red.classList.toggle("active");
-  yellow.classList.remove("active");
-  green.classList.remove("active");
-});
+// redBtn.addEventListener("click", () => {
+//   red.classList.toggle("active");
+//   yellow.classList.remove("active");
+//   green.classList.remove("active");
+// });
 
-yellowBtn.addEventListener("click", () => {
-  yellow.classList.toggle("active");
-  green.classList.remove("active");
-  red.classList.remove("active");
-});
+// yellowBtn.addEventListener("click", () => {
+//   yellow.classList.toggle("active");
+//   green.classList.remove("active");
+//   red.classList.remove("active");
+// });
 
-greenBtn.addEventListener("click", () => {
-  green.classList.toggle("active");
-  yellow.classList.remove("active");
-  red.classList.remove("active");
-});
+// greenBtn.addEventListener("click", () => {
+//   green.classList.toggle("active");
+//   yellow.classList.remove("active");
+//   red.classList.remove("active");
+// });
 
-const lights = [red, yellow, green];
-let i = 0;
+// const lights = [red, yellow, green];
+// let i = 0;
 
-autoBtn.addEventListener("click", () => {
-  setInterval(() => {
-    lights.forEach((light) => {
-      light.classList.add("active");
-    });
+// autoBtn.addEventListener("click", () => {
+//   setInterval(() => {
+//     lights.forEach((light) => {
+//       light.classList.add("active");
+//     });
 
-    lights[i].classList.remove("active");
+//     lights[i].classList.remove("active");
 
-    i = (i+1) % lights.length;
-  }, 5000);
-});
+//     i = (i+1) % lights.length;
+//   }, 5000);
+// });
 
-// ======================= Country Info Display ==================== //
+// ======================= Traffic Signal Simulation ==================== //
+
+// ======================= Number guess game ==================== //
+
+const message = document.querySelector(".message");
+
+let userNumber = Number(window.prompt("Guess a number from 1-100 :"));
+
+let computerNumber = Math.floor(Math.random() * 100);
+
+if (isNaN(userNumber)) {
+  alert(`Choose number not word or letter`);
+}
+if (userNumber > 100 || userNumber < 1) {
+  alert("You have to choose a number between 1 to 100");
+}
+
+if (userNumber === computerNumber) {
+  message.textContent = `Congratulations You won the game 🥳`;
+} else if (userNumber > computerNumber) {
+  message.textContent = `Too high!! You have choosed ${userNumber} & Compter choosed ${computerNumber}`;
+} else {
+  message.textContent = `Too Low!! You have choosed ${userNumber} & Compter choosed ${computerNumber}`;
+}
+
+// ======================= Number guess game ==================== //
