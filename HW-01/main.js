@@ -426,25 +426,25 @@
 
 // ======================= Number guess game ==================== //
 
-const message = document.querySelector(".message");
+// const message = document.querySelector(".message");
 
-let userNumber = Number(window.prompt("Guess a number from 1-100 :"));
+// let userNumber = Number(window.prompt("Guess a number from 1-100 :"));
 
-let computerNumber = Math.floor(Math.random() * 100);
+// let computerNumber = Math.floor(Math.random() * 100);
 
-if (isNaN(userNumber)) {
-  alert(`Choose number not word or letter`);
-}
-if (userNumber > 100 || userNumber < 1) {
-  alert("You have to choose a number between 1 to 100");
-}
+// if (isNaN(userNumber)) {
+//   alert(`Choose number not word or letter`);
+// }
+// if (userNumber > 100 || userNumber < 1) {
+//   alert("You have to choose a number between 1 to 100");
+// }
 
-if (userNumber === computerNumber) {
-  message.textContent = `Congratulations You won the game 🥳`;
-} else if (userNumber > computerNumber) {
-  message.textContent = `Too high!! You have choosed ${userNumber} & Compter choosed ${computerNumber}`;
-} else {
-  message.textContent = `Too Low!! You have choosed ${userNumber} & Compter choosed ${computerNumber}`;
-}
+// if (userNumber === computerNumber) {
+//   message.textContent = `Congratulations You won the game 🥳`;
+// } else if (userNumber > computerNumber) {
+//   message.textContent = `Too high!! You have choosed ${userNumber} & Compter choosed ${computerNumber}`;
+// } else {
+//   message.textContent = `Too Low!! You have choosed ${userNumber} & Compter choosed ${computerNumber}`;
+// }
 
 // ======================= Number guess game ==================== //
