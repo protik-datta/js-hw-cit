@@ -45,7 +45,7 @@ function checkBalance(check) {
 // deposit function :
 
 function depositMoney(amount) {
-  if (isNaN(amount) || amount <= 0) {
+  if (isNaN(amount) || amount < 0) {
     alert("❌ Invalid deposit amount");
   } else {
     balance += amount;
