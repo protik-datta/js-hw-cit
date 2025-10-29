@@ -27,16 +27,3 @@ p {
   font-size: 16px;
 }
 
-.success {
-  color: #6eff6e;
-}
-
-.error {
-  color: #ff6e6e;
-}
-
-.footer {
-  margin-top: 15px;
-  font-size: 14px;
-  opacity: 0.8;
-}
