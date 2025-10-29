@@ -8,6 +8,7 @@ function startCarRental() {
   let total = 0;
   let discount = 0;
   let subcharge = 0;
+  let carName;
 
   alert("🚗 Welcome to Car Rental Service");
 
@@ -29,18 +30,25 @@ function startCarRental() {
       if (!car) continue;
 
       if (car.toLowerCase() === "toyota") {
+        carName = car.toLocaleUpperCase();
         return 3000;
       } else if (car.toLowerCase() === "honda") {
+        carName = car.toLocaleUpperCase();
         return 2800;
       } else if (car.toLowerCase() === "bmw") {
+        carName = car.toLocaleUpperCase();
         return 8000;
       } else if (car.toLowerCase() === "tesla") {
+        carName = car.toLocaleUpperCase();
         return 10000;
       } else if (car.toLowerCase() === "mercedez") {
+        carName = car.toLocaleUpperCase();
         return 8000;
       } else if (car.toLowerCase() === "volvo") {
+        carName = car.toLocaleUpperCase();
         return 5000;
       } else if (car.toLowerCase() === "axio") {
+        carName = car.toLocaleUpperCase();
         return 2500;
       } else {
         alert("Car not found ‼️");
@@ -111,7 +119,7 @@ function startCarRental() {
         weekday.toLowerCase() === "saturday" ||
         weekday.toLowerCase() === "sunday"
       ) {
-        return (perDayAmount * days) * 0.1;
+        return perDayAmount * days * 0.1;
       } else if (
         weekday.toLowerCase() === "monday" ||
         weekday.toLowerCase() === "tuesday" ||
@@ -149,14 +157,15 @@ function startCarRental() {
     alert(`
     ==============  Car Rental Invoice  =============
 
-    Rent per Day      :  ${perDayAmount} ৳
-    Total Days        :  ${days}
-    Insurance         :  ${insuranceCost} ৳
-    Fuel Charge       :  ${fuelPayment} ৳
-    Weekend Subcharge :  ${subcharge} ৳
-    Discount(5%)      :  ${discount} ৳
+    Car Name            :  ${carName}
+    Rent per Day        :  ${perDayAmount} ৳
+    Total Days          :  ${days}
+    Insurance           :  ${insuranceCost} ৳
+    Fuel Charge         :  ${fuelPayment} ৳
+    Weekend Subcharge   :  ${subcharge} ৳
+    Discount(5%)        :  ${discount} ৳
     -----------------------------
-    Total Payable     :  ${finalTotal} ৳
+    Total Payable       :  ${finalTotal} ৳
     -----------------------------
     Thank you for renting with us
         `);
