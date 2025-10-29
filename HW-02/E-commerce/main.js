@@ -62,7 +62,7 @@ finalPrice = finalPrice.toFixed(2);
 // Invoice
 const invoice = document.getElementById("invoice");
 invoice.innerHTML = `
-    <h2>🧾 Invoice</h2>
+    <h2>Invoice</h2>
     <p><b>Product:</b> ${productName.toUpperCase()}</p>
     <p><b>Price:</b> ${productPrice} TK</p>
     <p><b>Quantity:</b> ${productQuantity}</p>
@@ -71,6 +71,6 @@ invoice.innerHTML = `
     <p><b>VAT (15%):</b> +${vatTotal} TK</p>
     <p><b>Promo Discount:</b> -${promoDisc} TK</p>
     <hr>
-    <h3>✅ Final Amount: ${finalPrice} TK</h3>
+    <h3>Final Amount: ${finalPrice} TK</h3>
     <p>Thank you for shopping with us ❤️</p>
   `;
