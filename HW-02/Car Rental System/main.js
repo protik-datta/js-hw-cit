@@ -12,6 +12,8 @@ function startCarRental() {
 
   alert("🚗 Welcome to Car Rental Service");
 
+
+  
   // show cars :
 
   function showCar() {
@@ -20,6 +22,8 @@ function startCarRental() {
     );
   }
   showCar();
+
+
 
   // select car :
 
@@ -58,6 +62,8 @@ function startCarRental() {
 
   perDayAmount = selectCar();
 
+
+
   // days function :
 
   function getDays() {
@@ -72,6 +78,8 @@ function startCarRental() {
   }
 
   days = getDays();
+
+
 
   // insurance :
 
@@ -93,6 +101,8 @@ function startCarRental() {
 
   insuranceCost = insurance(days);
 
+
+
   // fuel cost :
 
   function fuelCost(days) {
@@ -101,6 +111,8 @@ function startCarRental() {
 
   fuelPayment = fuelCost(days);
 
+
+
   // total :
 
   function calcTotal(rent, insurance, days, fuel) {
@@ -108,6 +120,8 @@ function startCarRental() {
   }
 
   total = calcTotal(perDayAmount, insuranceCost, days, fuelPayment);
+
+
 
   // weekend special :
 
@@ -137,6 +151,8 @@ function startCarRental() {
 
   subcharge = weekend(perDayAmount);
 
+
+
   // discount :
 
   function calcDiscount(totalAmount) {
@@ -148,6 +164,8 @@ function startCarRental() {
   }
 
   discount = calcDiscount(total);
+
+
 
   // invoice :
 
