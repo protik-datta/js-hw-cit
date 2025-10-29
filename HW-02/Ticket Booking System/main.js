@@ -2,7 +2,7 @@
 
 let userChoice;
 let seatChoice;
-let ticketNumber;
+let ticketQuantity;
 let ticketPrice = 0;
 let total = 0;
 let discount = 0;
@@ -91,7 +91,7 @@ let ticketBook = () => {
     seatChoice = window.prompt(
       "Enter your preferred seat number (like A1, VIP1, T3, etc.):"
     );
-    ticketNumber = Number(
+    ticketQuantity = Number(
       window.prompt("How much ticket do you want to book :")
     );
 
@@ -108,7 +108,7 @@ let ticketBook = () => {
         seatChoice === "B2")
     ) {
       ticketPrice = 500;
-      total = ticketPrice * ticketNumber;
+      total = ticketPrice * ticketQuantity;
       categoryName = "Movie Tickets";
     } else if (
       userChoice === 2 &&
@@ -119,7 +119,7 @@ let ticketBook = () => {
         seatChoice === "5")
     ) {
       ticketPrice = 300;
-      total = ticketPrice * ticketNumber;
+      total = ticketPrice * ticketQuantity;
       categoryName = "Bus Tickets";
     } else if (
       userChoice === 3 &&
@@ -130,7 +130,7 @@ let ticketBook = () => {
         seatChoice === "14")
     ) {
       ticketPrice = 400;
-      total = ticketPrice * ticketNumber;
+      total = ticketPrice * ticketQuantity;
       categoryName = "Train Tickets";
     } else if (
       userChoice === 4 &&
@@ -140,7 +140,7 @@ let ticketBook = () => {
         seatChoice === "R2")
     ) {
       ticketPrice = 1500;
-      total = ticketPrice * ticketNumber;
+      total = ticketPrice * ticketQuantity;
       categoryName = "Concert Tickets";
     } else if (
       userChoice === 5 &&
@@ -150,7 +150,7 @@ let ticketBook = () => {
         seatChoice === "T4")
     ) {
       ticketPrice = 800;
-      total = ticketPrice * ticketNumber;
+      total = ticketPrice * ticketQuantity;
       categoryName = "Play Tickets";
     } else if (
       userChoice === 6 &&
@@ -160,7 +160,7 @@ let ticketBook = () => {
         seatChoice === "S4")
     ) {
       ticketPrice = 1200;
-      total = ticketPrice * ticketNumber;
+      total = ticketPrice * ticketQuantity;
       categoryName = "Sports Event Tickets";
     } else if (
       userChoice === 7 &&
@@ -170,7 +170,7 @@ let ticketBook = () => {
         seatChoice === "F4")
     ) {
       ticketPrice = 5000;
-      total = ticketPrice * ticketNumber;
+      total = ticketPrice * ticketQuantity;
       categoryName = "Flight Tickets";
     } else if (
       userChoice === 8 &&
@@ -179,7 +179,7 @@ let ticketBook = () => {
         seatChoice === "ENTRY3")
     ) {
       ticketPrice = 1000;
-      total = ticketPrice * ticketNumber;
+      total = ticketPrice * ticketQuantity;
       categoryName = "Amusement Park Tickets";
     } else if (
       userChoice === 9 &&
@@ -189,7 +189,7 @@ let ticketBook = () => {
         seatChoice === "W4")
     ) {
       ticketPrice = 700;
-      total = ticketPrice * ticketNumber;
+      total = ticketPrice * ticketQuantity;
       categoryName = "Seminar Tickets";
     } else if (
       userChoice === 10 &&
@@ -200,7 +200,7 @@ let ticketBook = () => {
         seatChoice === "E5")
     ) {
       ticketPrice = 300;
-      total = ticketPrice * ticketNumber;
+      total = ticketPrice * ticketQuantity;
       categoryName = "Fair Tickets";
     } else {
       alert("❌ Invalid category number or seat choice!");
@@ -223,7 +223,7 @@ let ticketBook = () => {
     ===============================
      Category      : ${categoryName}
      Seat          : ${seatChoice}
-     Quantity      : ${ticketNumber}
+     Quantity      : ${ticketQuantity}
      Price         : ${ticketPrice} BDT
      Discount      : ${discount} BDT
      Total Payable : ${total} BDT
@@ -236,7 +236,7 @@ let ticketBook = () => {
     return {
       bookedSeat: seatChoice,
       bookedCategory: categoryName,
-      bookedQuantity: ticketNumber,
+      bookedQuantity: ticketQuantity,
       bookedTotal: total,
     };
   }
@@ -245,7 +245,7 @@ let ticketBook = () => {
 // ticket cancelation :
 
 function cancelTicket(booked) {
-  alert("🎟 Welcome to Ticket Cancellation Section");
+  alert("Welcome to Ticket Cancellation Section");
 
   let wantToCancel = window.prompt(
     "Do you want to cancel your ticket? (yes/no)"
@@ -253,7 +253,7 @@ function cancelTicket(booked) {
 
   while (true) {
     if (wantToCancel.toLowerCase() === "no") {
-      alert("🙂 Okay! Your ticket is still active.");
+      alert("Okay! Your ticket is still active.");
       break;
     } else if (wantToCancel.toLowerCase() === "yes") {
       let seatNumber = window.prompt(
@@ -268,13 +268,13 @@ function cancelTicket(booked) {
         ===============================
             ❌ Ticket Cancellation ❌
         ===============================
-        🎟 Category : ${booked.bookedCategory}
-        💺 Seat : ${booked.bookedSeat}
-        🎫 Quantity : ${booked.bookedQuantity}
-        💵 Total Paid : ${booked.bookedTotal} BDT
-        💰 Refund Amount : ${refund} BDT
+        Category : ${booked.bookedCategory}
+        Seat : ${booked.bookedSeat}
+        Quantity : ${booked.bookedQuantity}
+        Total Paid : ${booked.bookedTotal} BDT
+        Refund Amount : ${refund} BDT
         ===============================
-        ✅ Your ticket has been cancelled successfully!
+        Your ticket has been cancelled successfully!
         ===============================
                 `);
         break;
