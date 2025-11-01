@@ -144,33 +144,6 @@ const showRoom = () => {
 
 showRoom();
 
-// ====================== option =========================== //
-
-const action = () => {
-  while (true) {
-    let choice = window.prompt(
-      `Hotel Booking Menu:
-    1️⃣ Book a room
-    2️⃣ Cancel a booking
-    3️⃣ Check-in guest
-    4️⃣ Check-out guest
-    5️⃣ Show all bookings
-    6️⃣ Show all guests
-    0️⃣ Exit
-Enter your choice:`
-    );
-
-    choice = Number(choice);
-
-    if (isNaN(choice) || ![0, 1, 2, 3, 4, 5, 6].includes(choice)) {
-      alert("Please submit only number which is shown to the display");
-      continue;
-    }
-  }
-};
-
-action();
-
 // ========================= booking =========================== //
 
 const booking = () => {
@@ -398,7 +371,7 @@ const booking = () => {
             We hope to serve you again.
             ===============================
             `);
-        
+
         selectedRoom.available++;
 
         let index = bookings.indexOf(foundBooking);
@@ -415,4 +388,3 @@ const booking = () => {
 };
 
 booking();
-
