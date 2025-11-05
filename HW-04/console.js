@@ -76,3 +76,7 @@ import { universe } from "./main.js";
 // for(let admin of admins){
 //     console.log(admin.username);
 // }
+
+
+
+// console.log(universe.galaxies[0].planets[0].continents.asia.cities("bangladesh"));

@@ -86,6 +86,21 @@ const universe = {
                   ],
                 },
               ],
+
+              cities : function listCities(countryName) {
+                const countries = universe.galaxies[0].planets[0].continents.asia.countries
+
+                for(let country of countries){
+                  if(country.name.toLowerCase() === countryName.toLowerCase()){
+                    console.log(`Cities in ${countryName.toUpperCase()}`);
+                    country.cities.forEach((city,index)=>{
+                      console.log(`${index+1}. ${city.name}`)
+                    })
+                    return;
+                  }
+                }
+              }
+
             },
             europe: {
               countries: [
