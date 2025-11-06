@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Random Password Generator</h1>
+
+      <div class="card">
+        <label for="result" class="label">Generated Password</label>
+        <div class="result-row">
+          <input
+            type="text"
+            id="result"
+            readonly
+            placeholder="Your password will appear here"
+          />
+          <button id="copyBtn" class="btn small">Copy</button>
+        </div>
+
+        <div class="options">
+          <div class="option">
+            <label for="length">Length</label>
+            <input type="number" id="length" min="4" max="64" value="16" />
+          </div>
+
+          <div class="option checkbox">
+            <input type="checkbox" id="lowercase" checked />
+            <label for="lowercase">Lowercase</label>
+          </div>
+
+          <div class="option checkbox">
+            <input type="checkbox" id="uppercase" checked />
+            <label for="uppercase">Uppercase</label>
+          </div>
+
+          <div class="option checkbox">
+            <input type="checkbox" id="numbers" checked />
+            <label for="numbers">Numbers</label>
+          </div>
+
+          <div class="option checkbox">
+            <input type="checkbox" id="symbols" />
+            <label for="symbols">Symbols</label>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="generateBtn" class="btn">Generate</button>
+          <button id="clearBtn" class="btn ghost">Clear</button>
+        </div>
+      </div>
+
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>

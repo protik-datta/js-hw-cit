@@ -1,0 +1,147 @@
+/* Simple dark UI */
+:root{
+  --bg: #0b0f12;
+  --surface: #121417;
+  --muted: #9aa3a6;
+  --accent: #2dd4bf; /* teal-ish accent */
+  --btn-bg: #1f2628;
+  --btn-hover: #2a3536;
+  --danger: #ff6b6b;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter, system-ui, Arial, sans-serif}
+
+body{
+  min-height:100vh;
+  background: linear-gradient(180deg, var(--bg) 0%, #071011 100%);
+  color:#e6eef0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:32px;
+}
+
+.container{
+  width:100%;
+  max-width:420px;
+  text-align:center;
+}
+
+h1{
+  font-size:1.4rem;
+  font-weight:600;
+  margin-bottom:18px;
+  color:var(--accent);
+  letter-spacing:0.2px;
+}
+
+.card{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border:1px solid rgba(255,255,255,0.03);
+  padding:20px;
+  border-radius:10px;
+  box-shadow: 0 8px 30px rgba(2,6,8,0.6);
+}
+
+.label{
+  display:block;
+  text-align:left;
+  font-size:0.85rem;
+  color:var(--muted);
+  margin-bottom:8px;
+}
+
+.result-row{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  margin-bottom:14px;
+}
+
+#result{
+  flex:1;
+  background:var(--surface);
+  border:1px solid rgba(255,255,255,0.03);
+  padding:10px 12px;
+  border-radius:8px;
+  color:#e6eef0;
+  font-weight:500;
+  font-size:0.95rem;
+  outline:none;
+}
+
+.btn{
+  background:var(--btn-bg);
+  border:1px solid rgba(255,255,255,0.04);
+  color:#e6eef0;
+  padding:10px 12px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+  transition: background 0.15s, transform 0.08s;
+}
+
+.btn.small{padding:8px 10px;font-size:0.85rem}
+
+.btn:hover{background:var(--btn-hover); transform:translateY(-1px)}
+
+.actions{
+  display:flex;
+  gap:10px;
+  margin-top:8px;
+  justify-content:center;
+}
+
+.btn.ghost{
+  background:transparent;
+  border:1px dashed rgba(255,255,255,0.04);
+  color:var(--muted);
+  font-weight:600;
+}
+
+.options{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin:8px 0 6px 0;
+}
+
+.option{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+
+.option.checkbox{
+  flex-direction:row;
+  align-items:center;
+  gap:8px;
+}
+
+.option label{
+  font-size:0.9rem;
+  color:var(--muted);
+}
+
+#length{
+  width:100%;
+  padding:8px 10px;
+  border-radius:6px;
+  background:var(--surface);
+  border:1px solid rgba(255,255,255,0.03);
+  color:#e6eef0;
+  outline:none;
+}
+
+.note{
+  margin-top:12px;
+  font-size:0.82rem;
+  color:var(--muted);
+  text-align:center;
+}
+
+/* Small screens */
+@media (max-width:420px){
+  .card{padding:16px}
+  .options{grid-template-columns:1fr 1fr}
+}
