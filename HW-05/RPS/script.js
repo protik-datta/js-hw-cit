@@ -22,7 +22,7 @@ choices.forEach((choice) => {
     if (lastPlayerChoice && Math.random() < 0.7) {
       if (lastPlayerChoice === "rock") computerChoice = "paper";
       else if (lastPlayerChoice === "paper") computerChoice = "scissors";
-      else computerChoice = "rock";
+      else if (lastPlayerChoice === "scissors") computerChoice = "paper";
     } else {
       computerChoice = ["rock", "paper", "scissors"][
         Math.floor(Math.random() * 3)
@@ -73,23 +73,47 @@ resetGame.addEventListener("click", () => {
 let confettiFrameId;
 
 function startConfetti() {
-  const end = Date.now() + 5000;
+  const end = Date.now() + 3000;
   const colors = ["#bb0000", "#ffffff"];
 
   function frame() {
     confetti({
       particleCount: 2,
       angle: 60,
-      spread: 55,
-      origin: { x: 0 },
+      spread: 70,
+      origin: { x: 0, y: 1 },
       colors: colors,
     });
 
     confetti({
       particleCount: 2,
       angle: 120,
-      spread: 55,
-      origin: { x: 1 },
+      spread: 70,
+      origin: { x: 1, y: 1 },
+      colors: colors,
+    });
+
+    confetti({
+      particleCount: 2,
+      angle: 90,
+      spread: 70,
+      origin: { x: 0.3, y: 1 },
+      colors: colors,
+    });
+
+    confetti({
+      particleCount: 2,
+      angle: 90,
+      spread: 70,
+      origin: { x: 0.5, y: 1 },
+      colors: colors,
+    });
+
+    confetti({
+      particleCount: 2,
+      angle: 90,
+      spread: 70,
+      origin: { x: 0.7, y: 1 },
       colors: colors,
     });
 
