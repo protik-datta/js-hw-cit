@@ -19,7 +19,7 @@ choices.forEach((choice) => {
 
     let computerChoice;
 
-    if (lastPlayerChoice && Math.random() < 0.7) {
+    if (lastPlayerChoice && Math.random() < 1) {
       if (lastPlayerChoice === "rock") computerChoice = "paper";
       else if (lastPlayerChoice === "paper") computerChoice = "scissors";
       else if (lastPlayerChoice === "scissors") computerChoice = "paper";
