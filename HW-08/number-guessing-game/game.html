@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Guessing Game</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-gray-50 flex flex-col justify-center min-h-screen px-6">
+    <!-- Error Popup -->
+    <div
+      id="errorPopup"
+      class="fixed top-0 left-1/2 transform -translate-x-1/2 -translate-y-full bg-red-600 text-white px-6 py-3 rounded-b-xl shadow-lg text-sm font-medium transition-transform duration-500 z-50"
+    ></div>
+
+    <!-- success popup -->
+    <div
+      id="successPopup"
+      class="fixed top-0 left-1/2 transform -translate-x-1/2 -translate-y-full bg-green-600 text-white px-6 py-3 rounded-b-xl shadow-lg text-sm font-medium transition-transform duration-500 z-50"
+    ></div>
+
+    <div class="sm:mx-auto sm:w-full sm:max-w-md text-center mb-6">
+      <h2 class="text-3xl font-extrabold text-gray-900">
+        🎯 Number Guessing Game
+      </h2>
+      <p class="mt-2 text-sm text-gray-600">
+        Guess a number between <span id="min-num" class="font-bold">1</span> and
+        <span id="max-num" class="font-bold">100</span>
+      </p>
+    </div>
+
+    <div
+      class="sm:mx-auto sm:w-full sm:max-w-md bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10"
+    >
+      <form id="guessForm">
+        <div>
+          <input
+            type="number"
+            id="guessInput"
+            placeholder="Enter your guess"
+            class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+          />
+        </div>
+        <div class="mt-6">
+          <button
+            type="submit"
+            id="submitBtn"
+            class="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-500 hover:bg-blue-500 transition duration-150 ease-in-out"
+          >
+            Guess
+          </button>
+        </div>
+      </form>
+
+      <div class="mt-6 text-center">
+        <p id="attempts" class="text-gray-700 font-medium">
+          
+        </p>
+      </div>
+
+      <!-- ADDED BUTTONS -->
+      <div class="mt-4 flex gap-3">
+        <button
+          id="resetBtn"
+          class="w-1/2 py-2 bg-yellow-500 text-white font-medium rounded-md hover:bg-yellow-600 transition"
+        >
+          Reset
+        </button>
+
+        <button
+          id="restartBtn"
+          class="w-1/2 py-2 bg-red-500 text-white font-medium rounded-md hover:bg-red-600 transition"
+        >
+          Restart
+        </button>
+      </div>
+      <!-- END ADDED BUTTONS -->
+
+    </div>
+  </body>
+  <script src="js/app.js"></script>
+</html>
+
